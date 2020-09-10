@@ -1,0 +1,35 @@
+{% extends 'users/base.html' %}
+{% block content %}
+<div class="site-section">
+    <div class="container">
+        <div class="row align-items-end">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="course-1-item">
+                    <div class="rating text-center mb-3">
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                    </div>
+                    <p><a href="{% url 'tutor_register' %}" class="btn btn-primary rounded-0 px-4">Tutor Register</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="course-1-item">
+                        <div class="rating text-center mb-3">
+                            <span class="icon-star2 text-warning"></span>
+                            <span class="icon-star2 text-warning"></span>
+                            <span class="icon-star2 text-warning"></span>
+                            <span class="icon-star2 text-warning"></span>
+                            <span class="icon-star2 text-warning"></span>
+                        </div>
+                        <p><a href="{% url 'student_register' %}" class="btn btn-primary rounded-0 px-4">Student Register</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
