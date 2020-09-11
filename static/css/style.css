@@ -71,7 +71,8 @@ h1, h2, h3, h4, h5,
 
 .site-section-1 {
   padding: 5.5em 0; 
-  color: whitesmoke;
+  color: #EAE2B7;
+  background-image: url('../imgs/sergey-zolkin.jpg');
 }
   @media (min-width: 768px) {
     .site-section {
@@ -260,7 +261,7 @@ h1, h2, h3, h4, h5,
   .site-navbar .site-navigation .site-menu {
     margin-bottom: 0; }
     .site-navbar .site-navigation .site-menu .active > a {
-      color: #183A37;
+      color: #003049;
       display: inline-block;
       padding: 5px 20px; }
     .site-navbar .site-navigation .site-menu a {
@@ -277,7 +278,7 @@ h1, h2, h3, h4, h5,
         display: inline-block;
         text-decoration: none !important; }
         .site-navbar .site-navigation .site-menu > li > a:hover {
-          color: #51be78; }
+          color: #F77F00; }
     .site-navbar .site-navigation .site-menu .has-children {
       position: relative; }
       .site-navbar .site-navigation .site-menu .has-children > a {
@@ -299,7 +300,7 @@ h1, h2, h3, h4, h5,
         top: 100%;
         position: absolute;
         text-align: left;
-        border-top: 2px solid #51be78;
+        border-top: 2px solid #F77F00;
         -webkit-box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.1);
         box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.1);
         border-left: 1px solid #edf0f5;
@@ -598,11 +599,11 @@ h1, h2, h3, h4, h5,
     font-size: 14px; }
   .custom-breadcrumns a {
     display: inline-block;
-    color: #bdbdbd; }
+    color: #003049; }
     .custom-breadcrumns a:hover {
-      color: #51be78; }
+      color: #FCBF49; }
   .custom-breadcrumns .current {
-    color: #51be78; }
+    color: #F77F00; }
 
 .section-title-underline {
   color: #000; }
@@ -714,7 +715,7 @@ h1, h2, h3, h4, h5,
   display: inline-block;
   width: 40px;
   height: 40px;
-  background: #183A37;
+  background: #003049;
   position: relative; }
   .social-wrap a > span {
     position: absolute;
@@ -725,7 +726,7 @@ h1, h2, h3, h4, h5,
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
   .social-wrap a:hover {
-    background: #000; }
+    background: #FCBF49; }
 
 .block-number-1 .icon {
   color: #fff;
@@ -934,7 +935,10 @@ h1, h2, h3, h4, h5,
         margin: 2px; }
     .course-1-item .course-1-content .desc {
       font-size: 15px; }
-
+      .course-1-content .btn{
+        background-color: #FCBF49;
+        color: #001B29;
+      }
 .footer {
   padding: 4rem 0;
   background: #183661;
@@ -1095,8 +1099,11 @@ h1, h2, h3, h4, h5,
     stroke-dashoffset: -136px; } }
 
 .py-2{
-  background-color: #183A37;
-  color: #EFD6AC;
+  background-color: #FF931F;
+  color: #001B29;
+}
+.py-2 a{
+  color: #003049;
 }
 #intro-text{
   color: #EFD6AC;

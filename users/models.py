@@ -45,6 +45,7 @@ class Course(models.Model):
         return self.title
 
 class NotesMaterial(models.Model):
+    note_content = models.FileField(null = True, upload_to='notes')
     note_title = models.CharField(max_length=200, null=False)
     note_description = models.CharField(max_length=200, null=False)
     course = models.OneToOneField(Course, on_delete=models.CASCADE, null=True)
