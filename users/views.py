@@ -11,7 +11,8 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 @unauthenticated_user
 def RegisterOption(request):
-    return render(request, "users/register_option.html")
+    title = "Register Option"
+    return render(request, "users/register_option.html",{'title':title})
 
 @unauthenticated_user
 def StudentRegister(request):

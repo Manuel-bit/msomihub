@@ -25,8 +25,8 @@ class Student(models.Model):
     def __str__(self):
         return f'{self.user.username} Profile'
 
-    def save(self):
-        super().save()
+    def save(self,  *args, **kwargs):
+        super(Student, self).save(*args, **kwargs)
 
         img = Image.open(self.image.path)
 

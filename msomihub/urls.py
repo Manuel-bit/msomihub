@@ -7,7 +7,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^', include('users.urls')),
-    path('admin/', admin.site.urls),
+    url(r'^e-learning/', include('elearning.urls')),
+    url('admin/', admin.site.urls),
 ]
 
 if settings.DEBUG:

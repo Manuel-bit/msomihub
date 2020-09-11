@@ -71,10 +71,7 @@ h1, h2, h3, h4, h5,
 
 .site-section-1 {
   padding: 5.5em 0; 
-  background-image: url('../imgs/sergey-zolkin.jpg');
-}
-.site-section-1 h4{
- color: white;
+  color: whitesmoke;
 }
   @media (min-width: 768px) {
     .site-section {
@@ -717,7 +714,7 @@ h1, h2, h3, h4, h5,
   display: inline-block;
   width: 40px;
   height: 40px;
-  background: #023047;
+  background: #183A37;
   position: relative; }
   .social-wrap a > span {
     position: absolute;
@@ -1098,14 +1095,9 @@ h1, h2, h3, h4, h5,
     stroke-dashoffset: -136px; } }
 
 .py-2{
-  background-color: #023047;
+  background-color: #183A37;
   color: #EFD6AC;
 }
-
-.py-2 a{
-  color: #EFD6AC;
-}
-
 #intro-text{
   color: #EFD6AC;
 }

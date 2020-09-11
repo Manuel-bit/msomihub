@@ -1,0 +1,25 @@
+{% extends 'e-learning/base.html' %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <div class="loggin">
+              <h2>Stdent Details</h2>
+              <form class=" form-group" action="" method="POST" enctype="multipart/form-data">
+                {%csrf_token%}
+                {%bootstrap_form u_form%}
+                {%bootstrap_form sp_form%}
+                <button class="btn-btn-default" type="submit" name="button">Update</button>
+                <br> <br>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </div>
+  </div>
+{% endblock %}
