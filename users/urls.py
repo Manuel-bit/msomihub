@@ -5,8 +5,8 @@ from . import views
 
 urlpatterns = [
 
+    url(r'^choice_register/$', views.RegisterOption, name="register_option"),
     url(r'^$', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
-    url(r'register_option', views.RegisterOption, name="register_option"),
     url(r'^student_register/$', views.StudentRegister, name="student_register"),
     url(r'^tutor_register/$', views.TutorRegister, name="tutor_register"),
     url(r"^student_update/$", views.profile, name='student_update'),

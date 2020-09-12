@@ -9,12 +9,10 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-@unauthenticated_user
 def RegisterOption(request):
     title = "Register Option"
     return render(request, "users/register_option.html",{'title':title})
 
-@unauthenticated_user
 def StudentRegister(request):
     form = CreateUserForm()
     if request.method == 'POST':
@@ -34,7 +32,6 @@ def StudentRegister(request):
     context = {'form':form}
     return render(request, 'users/studentregister.html', context)
 
-@unauthenticated_user
 def TutorRegister(request):
     form = CreateUserForm()
     if request.method == 'POST':

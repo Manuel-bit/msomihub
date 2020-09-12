@@ -74,6 +74,9 @@ h1, h2, h3, h4, h5,
   color: #EAE2B7;
   background-image: url('../imgs/sergey-zolkin.jpg');
 }
+.site-section-1 p {
+  color: #EAE2B7;
+}
   @media (min-width: 768px) {
     .site-section {
       padding: 5em 0; } }
