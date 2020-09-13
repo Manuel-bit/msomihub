@@ -17,7 +17,7 @@ SECRET_KEY = '-1$c(@yxj48+57522_cj8r-)ekh#71w+#ngg8of+c6xx_rza^n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['msomihub.herokuapp.com']
 
 
 # Application definition
