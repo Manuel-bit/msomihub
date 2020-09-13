@@ -39,7 +39,7 @@ class Course(models.Model):
     title = models.CharField(max_length=200, null=False)
     description = models.CharField(max_length=200, null=False)
     tutor = models.ForeignKey(Tutor, on_delete=models.CASCADE)
-    students = models.ManyToManyField(Student, null=True)
+    students = models.ManyToManyField(Student)
 
     def __str__(self):
         return self.title
