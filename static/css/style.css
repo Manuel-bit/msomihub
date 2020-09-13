@@ -1102,7 +1102,7 @@ h1, h2, h3, h4, h5,
     stroke-dashoffset: -136px; } }
 
 .py-2{
-  background-color: #FF931F;
+  background-color: #FDC85E;
   color: #001B29;
 }
 .py-2 a{
@@ -1110,4 +1110,7 @@ h1, h2, h3, h4, h5,
 }
 #intro-text{
   color: #EFD6AC;
+}
+.register-btn {
+  text-align: center;
 }

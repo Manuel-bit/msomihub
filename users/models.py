@@ -39,7 +39,7 @@ class Course(models.Model):
     title = models.CharField(max_length=200, null=False)
     description = models.CharField(max_length=200, null=False)
     tutor = models.ForeignKey(Tutor, on_delete=models.CASCADE)
-    students = models.ManyToManyField(Student)
+    students = models.ManyToManyField(Student, null=True)
 
     def __str__(self):
         return self.title
@@ -50,7 +50,13 @@ class NotesMaterial(models.Model):
     note_description = models.CharField(max_length=200, null=False)
     course = models.OneToOneField(Course, on_delete=models.CASCADE, null=True)
 
+    def __str__(self):
+        return self.note_title
+
 class VideoMaterial(models.Model):
     video_title = models.CharField(max_length=200, null=False)
     video_url = models.CharField(max_length=50, null=False)
     course = models.OneToOneField(Course, on_delete=models.CASCADE, null=True)
+
+    def __str__(self):
+        return self.video_title

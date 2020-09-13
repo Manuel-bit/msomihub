@@ -10,7 +10,7 @@ urlpatterns = [
     url(r"^tutor_profile/$", views.TutorProfile, name="tutor_profile"),
     url(r"^courses/$", views.Courses, name="courses"),
     url(r'^courses/notes/all/(\d+)/$', views.Materials, name="notes"),
-]
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
