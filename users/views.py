@@ -7,6 +7,8 @@ from django.contrib.auth import authenticate, login, logout
 from .decorators import unauthenticated_user
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 # Create your views here.
 def RegisterOption(request):
@@ -23,7 +25,7 @@ def StudentRegister(request):
 
             group = Group.objects.get(name='students')
             user.groups.add(group)
-
+            
             Student.objects.create(
                 user=user
             )
