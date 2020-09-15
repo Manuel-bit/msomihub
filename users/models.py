@@ -17,7 +17,7 @@ class Tutor(models.Model):
 class Student(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
     full_name = models.CharField(max_length=200, null=False)
-    image = models.ImageField( upload_to='profile_pics', null=True)
+    image = models.ImageField( default="profile_pics/default.jpg" ,upload_to='profile_pics')
     date_created = models.DateTimeField(auto_now_add=True, null=True)
     
 
