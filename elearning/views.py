@@ -5,7 +5,6 @@ from users.models import Tutor,Student,Course, NotesMaterial
 
 # Create your views here.
 @login_required(login_url='login')
-@TutorRedirect
 def StudentProfile(request):
     return render(request, 'e-learning/student_profile.html')
 
