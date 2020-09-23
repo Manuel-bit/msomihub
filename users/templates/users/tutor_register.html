@@ -1,40 +1,57 @@
 {% load bootstrap4 %}
 {% load crispy_forms_tags %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% if title %}
+      <title>{{ title }}</title>
+      {% else %}
+      <title>Msomihub Elearning </title>
+    {% endif %}
+    <title></title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Student Register</title>
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'registration/css/style.css' %}">
 </head>
 <body>
-    <br>
-<br>
-<br>
 
-<div class="container">
-  <div class="row">
-    <!-- Empty div -->
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
-      {% if form.errors %}
-      <p> Some Information Might be Incorrect </p>
-      {% endif %}
-      <div class="loggin">
-        <h2>Tutor Signup</h2>
-        <form class=" form-group" action="" method="POST">
-          {%csrf_token%}
-          {%bootstrap_form form%}
-          <button class="btn-btn-default" type="submit" name="button">Sign Up</button>
-          <br> <br>
-          <p>Already have an account ?<a href="{% url 'login' %}">Log In</a></p>
-        </form>
-      </div>
+    <div class="main">
+
+        <div class="container bg-transparent">
+          <div class="register-headline" style="text-align: center;">
+            <h3 style="color:#FCBF49 ;"> TUTOR REGISTER </h3>
+          </div>
+          <form class=" form-group" action="" method="POST" style="color:#FCBF49 ;">
+            {%csrf_token%}
+            {%bootstrap_form form%}
+            <button class="btn-btn-default" type="submit" name="button">Sign Up</button>
+            <br> <br>
+            <p>Already have an account ?  <a href="{% url 'login' %}" > Log In</a></p>
+          </form>
+        </div>
+
     </div>
-    <br><br>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+
+    <!-- JS -->
+    <script src="{% static 'registration/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'registration/js/main.js' %}"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
+
+
+
+
+
+
+
+
+
+
+

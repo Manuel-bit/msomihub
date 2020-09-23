@@ -1,33 +1,56 @@
-{%load bootstrap4%}
-{% load crispy_forms_tags%}
+{% load bootstrap4 %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <title>Log In</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% if title %}
+      <title>{{ title }}</title>
+      {% else %}
+      <title>Msomihub Elearning </title>
+    {% endif %}
+    <title></title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'registration/css/style.css' %}">
 </head>
-<body> 
- <div class="site-section">
-    <div class="container">
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-6">
-            <div class="loggin">
-              <h2>Login</h2>
-              <form class=" form-group" action="" method="POST">
-                {%csrf_token%}
-                {%bootstrap_form form%}
-                <button class="btn-btn-default" type="submit" name="button">Login</button>
-                <br> <br>
-                <p>Dont have an account ?<a href="{% url 'register_option' %}">Register here</a></p>
-              </form>
-            </div>
+<body>
+
+    <div class="main">
+
+        <div class="container bg-transparent">
+          <div class="register-headline" style="text-align: center;">
+            <h3 style="color:#FCBF49 ;"> STUDENT Login </h3>
           </div>
-          <div class="col-md-3"></div>
+          <form class=" form-group" action="" method="POST" style="color:#FCBF49 ;">
+            {%csrf_token%}
+            {%bootstrap_form form%}
+            <button class="btn-btn-default" type="submit" name="button">Sign In</button>
+            <br> <br>
+            <p>Dont have an account ?  <a href="{% url 'register_option' %}" > Sign Up</a></p>
+          </form>
         </div>
-      </div>
-  </div>
-</body>
+
+    </div>
+
+    <!-- JS -->
+    <script src="{% static 'registration/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'registration/js/main.js' %}"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
+
+
+
+
+
+
+
+
+
+
+
