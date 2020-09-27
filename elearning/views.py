@@ -13,11 +13,15 @@ def StudentProfile(request):
 def TutorProfile(request):
     return render(request, 'e-learning/tutor_profile.html')
 
+
+@login_required
 def Courses(request):
     current_user = request.user
     courses = Course.objects.filter(students__user__id=current_user.id)
     return render(request, 'e-learning/courses.html', {'courses':courses})
 
+    
+@login_required
 def Materials(request,not_id):
     notes = NotesMaterial.objects.filter(course_id=not_id)
     return render(request, 'e-learning/materials.html',{'notes':notes})

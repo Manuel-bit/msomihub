@@ -135,11 +135,14 @@ body {
   background-position: center center;
   font-weight: 400;
   font-family: 'Roboto Slab';
-  margin: 0px; }
+  margin: 0px; ;
+}
 
 .main {
   padding: 60px 0;
-  position: relative; }
+  position: relative; 
+  height: 100%;
+}
 
 .container {
   width: 586px;
