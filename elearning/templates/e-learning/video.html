@@ -1,14 +1,18 @@
 {% extends 'e-learning/base.html' %}
+{% load embed_video_tags %}
 {% block content %}
     <div class="container" style="padding: 50px 50px;">
-        <div class="row">
-            {% for video_item in video %}
-            <div class="col-md-6" style="padding: 30px 20px;">
-                <iframe width="500" height="250" src="{{video_item.video_url}}">
-                </iframe>
-            </div>
-            {% endfor %}
-        </div>
+        {% for video_item in video %}
+            {% video video_item.video 'small' %}
+        {% endfor %}
     </div>
 
 {% endblock %}
+
+<!-- <div class="row">
+    {% for video_item in video %}
+    <div class="col-md-6" style="padding: 30px 20px;">
+        {% video video_item.video 'small' %}
+    </div>
+    {% endfor %}
+</div> -->

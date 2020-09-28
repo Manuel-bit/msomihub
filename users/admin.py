@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Tutor, Student, Course,NotesMaterial,VideoMaterial
+from embed_video.admin import AdminVideoMixin
 
 # Register your models here.
 
@@ -24,7 +25,7 @@ class NotesMaterialAdmin(admin.ModelAdmin):
 
 admin.site.register(NotesMaterial)
 
-class VideoMaterialAdmin(admin.ModelAdmin):
+class VideoMaterialAdmin(AdminVideoMixin, admin.ModelAdmin):
     filter_horizontal = ('tags',)
 
 admin.site.register(VideoMaterial)

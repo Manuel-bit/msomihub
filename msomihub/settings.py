@@ -24,6 +24,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 # Application definition
 
 INSTALLED_APPS = [
+    'embed_video',
     'crispy_forms',
     'bootstrap4',
     'elearning.apps.ElearningConfig',

@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from PIL import Image
+from embed_video.fields import EmbedVideoField
 
 
 # Create your models here.
@@ -55,8 +56,9 @@ class NotesMaterial(models.Model):
 
 class VideoMaterial(models.Model):
     video_title = models.CharField(max_length=200, null=False)
-    video_url = models.CharField(max_length=50, null=False)
-    course = models.OneToOneField(Course, on_delete=models.CASCADE, null=True)
+    video = EmbedVideoField(null=False)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.video_title
+
