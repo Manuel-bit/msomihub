@@ -77,8 +77,9 @@
                 <li class="has-children">
                   <a href="{% url 'courses' %}" class="nav-link text-left">Courses</a>
                   <ul class="dropdown">
-                    <!-- <li><a href="teachers.html">Our Teachers</a></li>
-                    <li><a href="about.html">Our School</a></li> -->
+                    {% for course_item in courses %}
+                    <li><a href="#">{{course_item.title}}</a></li>
+                    {% endfor %}
                   </ul>
                 </li>
                 <li>
