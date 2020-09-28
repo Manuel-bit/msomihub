@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .decorators import allowed_users, TutorRedirect
 from django.contrib.auth.decorators import login_required
-from users.models import Tutor,Student,Course, NotesMaterial
+from users.models import Tutor,Student,Course, NotesMaterial, VideoMaterial
 
 # Create your views here.
 @login_required(login_url='login')
@@ -25,3 +25,7 @@ def Courses(request):
 def Materials(request,not_id):
     notes = NotesMaterial.objects.filter(course_id=not_id)
     return render(request, 'e-learning/materials.html',{'notes':notes})
+
+def VideoTutorials(request, vid_id):
+    video = VideoMaterial.objects.filter(course_id=vid_id)
+    return render(request, 'e-learning/video.html', {'video':video})

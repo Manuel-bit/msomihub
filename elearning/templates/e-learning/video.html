@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            {% for video_item in vodeo %}
+            <div class="col-md-6">
+                <iframe width="500" height="250" src="{{video_item.video_url}}">
+                </iframe>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
