@@ -26,6 +26,6 @@ def Materials(request,not_id):
     notes = NotesMaterial.objects.filter(course_id=not_id)
     return render(request, 'e-learning/materials.html',{'notes':notes})
 
-def VideoTutorials(request, vid_id):
-    video = VideoMaterial.objects.filter(course_id=vid_id)
+def VideoTutorials(request, not_id):
+    video = VideoMaterial.objects.filter(course_id=not_id)
     return render(request, 'e-learning/video.html', {'video':video})

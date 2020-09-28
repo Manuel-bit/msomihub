@@ -26,7 +26,8 @@
                         <span class="icon-star2 text-warning"></span>
                     </div>
                     <p class="desc mb-4">{{course_item.description}}</p>
-                    <p><a href="{% url 'notes' course_item.id %}" class="btn">Enroll In This Course</a></p>
+                    <p style="float: right;"><a href="{% url 'video_tutorials' course_item.id %}" class="btn">video content</a></p>
+                    <p><a href="{% url 'notes' course_item.id %}" class="btn">Enroll Course</a></p>
                     </div>
                 </div>
             </div>
